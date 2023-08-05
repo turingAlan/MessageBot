@@ -109,14 +109,14 @@ class instaBot:
         time.sleep(5)
         # to get the list of all the accouts
         account_conatiner = self.bot.find_element("xpath",'/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[1]/div/div/div[2]/div/div/div[2]/div/div/div[2]/div')
-        account_list = account_conatiner.find_elements(By.CSS_SELECTOR,'span.x1s6885')
-        print(account_list, "this is the full account list")
+        account_list = account_conatiner.find_elements(By.CSS_SELECTOR,'span[class*="x1s688f"]')
+        # print(account_list, "this is the full account list")
         # time.sleep(2)
-        # new_list = [account_item for index,account_item in enumerate(account_list) if index % 3 ==0]
-        # print(new_list, "this is the account list")
+        new_list = [account_item.text for account_item in account_list]
+        print(new_list, "this is the account list")
 
 def init():
-    instaBot("sarthak0jain@gmail.com","Sarthak@0909","marketing",audience,message)
+    instaBot("eikocircle@gmail.com","Sarthak@09","marketing",audience,message)
     input("done")
 
 init()
