@@ -84,12 +84,13 @@ class instaBot:
             self.bot.find_element("xpath",'/html/body/div[2]/div/div/div[3]/div/div/div[1]/div/div[2]/div/div/div/div/div/div/div[1]/div/div[4]/div').click()
             time.sleep(2)
 
+            #for entering the message
             send = self.bot.find_element("xpath",'/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/div/div/div/div[1]/div/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/div/div[2]/div/div[1]')
             
             send.send_keys(self.message)
             time.sleep(1)
-            send.send_keys(Keys.RETURN)
 
+            send.send_keys(Keys.RETURN)
             time.sleep(2)
 
 
@@ -97,6 +98,8 @@ class instaBot:
             self.bot.find_element("xpath",'/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/div/div/div/div[1]/div/div[1]/div/div[1]/div[2]/div/div').click()
             time.sleep(3)
 
+
+    #gives the account list accoding to the given input
     def accountList(self):
         # to click on the search user icon
         self.bot.find_element("xpath",'/html/body/div[2]/div/div/div[2]/div/div/div/div[1]/div[1]/div[1]/div/div/div/div/div[2]/div[2]/span/div/a').click()
